@@ -1,0 +1,33 @@
+CREATE TABLE affiliate (
+	affiliateid varchar(20) NOT NULL,
+	cuspp varchar(20) NULL,
+	documenttype varchar(10) NULL,
+	documentnumber varchar(20) NULL,
+	CONSTRAINT afiliate_pk PRIMARY KEY (affiliateid)
+);
+
+CREATE TABLE contacinfo (
+	affiliateid varchar(20) NOT NULL,
+	email varchar(50) NULL,
+	phone varchar(10) NULL,
+	CONSTRAINT contacinfo_pk PRIMARY KEY (affiliateid)
+);
+
+
+select * from affiliate a;
+select * from contacinfo a;
+
+INSERT INTO affiliate (affiliateid, cuspp, documenttype, documentnumber) VALUES('23123', '23123', 'DNI', '453221233');
+INSERT INTO affiliate (affiliateid, cuspp, documenttype, documentnumber) VALUES('45333', '45333', 'RUC', '4567773433455');
+
+
+INSERT INTO public.contacinfo
+(affiliateid, email, phone)
+VALUES('23123', 'sasas@gmail.com', '98775689');
+INSERT INTO public.contacinfo
+(affiliateid, email, phone)
+VALUES('45333', 'xxxxx@terra.com', '7654522');
+
+
+
+
